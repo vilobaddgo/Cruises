@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Морские круизы</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/all.min.js"></script>
+</head>
+<body>
+<div id="modal" class="modalBlock">
+    <button class="next" id="butNext"><i class="fas fa-angle-left"></i></button>
+
+    <div id="modal-content" class="modal-hid">
+        <img class="modal-img" src="">
+    </div>
+    <button class="prev"><i class="fas fa-angle-right"></i></button>
+    <button id="close" class="close"><i class="fas fa-times"></i></button>
+</div>
+
+
+<header class="header">
+    <div class="wrapper">
+
+        <div class="header-menu">
+
+            <a id="showMenu" class="watch">&#9776</a>
+            <ul class="header-menu-show">
+                <li><a href="#" class="header-menu-show-link">Личный кабинет</a></li>
+                <li><a href="#" class="header-menu-show-link">Каталог круизов</a></li>
+                <li><a href="#" class="header-menu-show-link">Вход для партнеров</a></li>
+                <li><a href="#" class="header-menu-show-link">О компании</a></li>
+                <li><a href="#" class="header-menu-show-link">Контакты</a></li>
+            </ul>
+
+            <nav class="header-nav">
+                <ul class="header-ul">
+                    <li class="header-link"><i class="far fa-user"></i> Личный кабинет <i class="fas fa-caret-down"></i>
+                    </li>
+                    <li class="header-link"><i class="fas fa-ruble-sign"></i> Рубль <i class="fas fa-caret-down"></i>
+                    </li>
+                    <li class="header-link">Ru <i class="fas fa-caret-down"></i></li>
+                </ul>
+                <div class="header-phone">
+                    <a href="#">8 800 500-61-05</a>
+                    <p>Круглосуточная поддержка</p>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+<section class="banner">
+    <div class="wrapper">
+
+        <div class="banner-body">
+            <div class="logo">
+                <img src="img/logo.png" alt="rose">
+            </div>
+            <p>Морские прогулки</p>
+            <h1>по чёрному морю</h1>
+            <button id="checkCruise">Выбрать круиз</button>
+            <div class="banner-line">
+                <img src="img/line.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="main">
+    <div class="wrapper">
+
+        <div class="catalog-show">
+            <h2>Каталог круизов</h2>
+            <p>Сортировать круизы по цене <i class="fas fa-caret-down"></i></p>
+        </div>
+
+        <div class="catalog-item">
+
+            <div class="catalog-list">
+                <figure class="anapa">
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/Anapa.png">
+                        <source media="(min-width: 725px)" srcset="img/lighthouse-1319560.png">
+                        <img class="catalog__img" src="img/anapa-mob.png" data-s="imgBig/Anapa-big.png">
+                    </picture>
+                    <div id="img-hit" class="hit">Хит продаж</div>
+                </figure>
+                <div class="catalog-text">
+                    <a href="#">Морской круиз<br/> в Анапу <i class="fas fa-caret-right"></i></a>
+                    <p><span class="span-text">Маршрут:</span> Сочи-Лазаревское-<br/>Геленджик-Анапа</p>
+                    <p><span class="span-text">Продолжительность:</span> 10 ч. 0 мин.</p>
+                    <span class="span-cost">49 000 руб.</span>
+                </div>
+            </div>
+
+            <div class="catalog-list">
+                <figure class="sochi">
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/sochi-1.png">
+                        <source media="(min-width: 725px)" srcset="img/sochi-tablet.png">
+                        <img class="catalog__img" src="img/sochi-mob.png" data-s="imgBig/sochi-big.png">
+                    </picture>
+                    <div id="img-action" class="sale">Акция</div>
+                </figure>
+                <div class="catalog-text">
+                    <a>Обзорная морская прогулка <br/>с экскурсией <i class="fas fa-caret-right"></i></a>
+                    <p><span class="span-text">Маршрут:</span> Сочи-Адлер-Сочи <br/>(без высадки)</p>
+                    <p><span class="span-text">Продолжительность:</span> 1 ч. 0 мин.</p>
+                    <div><span class="span-cost">5 000 руб.         </span><span class="span-oldCost">15000 руб.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="catalog-list" id="gelen-det">
+                <figure class="gel">
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/Gelen.png">
+                        <source media="(min-width: 725px)" srcset="img/gelen-tablet.png">
+                        <img class="catalog__img" src="img/gelen-mob.png" data-s="imgBig/gelen-big.png">
+                    </picture>
+                    <div id="img-sale" class="sale">Скидка<br>10%</div>
+                </figure>
+                <div class="catalog-text">
+                    <a>Морская прогулка<br/> в Геленджик <i class="fas fa-caret-right"></i></a>
+                    <p><span class="span-text">Маршрут:</span> Сочи-Туапсе-Геленджик</p>
+                    <p><span class="span-text">Продолжительность:</span> 12 ч. 30 мин.</p>
+                    <p><span class="span-cost">7 000 руб.            </span><span class="span-oldCost">10000 руб.</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="catalog-list">
+                <figure>
+                    <picture>
+                        <source media="(min-width: 1140px)" srcset="img/Novorossiysk.png">
+                        <source media="(min-width: 725px)" srcset="img/novoros-tablet.png">
+                        <img class="catalog__img" src="img/novoros-mob.png" data-s="imgBig/novoros-big.png">
+                    </picture>
+                </figure>
+                <div class="catalog-text">
+                    <a>Морской круиз<br/> в Новороссийск <i class="fas fa-caret-right"></i></a>
+                    <p><span class="span-text">Маршрут:</span> Сочи-Геленджик-<br/>Новороссйиск-Геленджик-Сочи</p>
+                    <p><span class="span-text">Продолжительность:</span> 13 ч. 0 мин.</p>
+                    <span class="span-cost">14 800 руб.</span>
+                </div>
+            </div>
+
+            <div class="catalog-list">
+                <div class="catalog-abrau">
+                    <div>
+                        <img class="catalog__img" src="img/Abrau.png" alt="abrau" data-s="imgBig/Abrau-big.png">
+                    </div>
+                    <div class="catalog-text">
+                        <a>Морская прогулка в Абрау-Дюрсо <i class="fas fa-caret-right"></i></a>
+                        <p><span class="span-text">Маршрут:</span> Сочи-Абрау-Дюрсо</p>
+                        <p><span class="span-text">Продолжительность:</span> 11 ч. 0 мин.</p>
+                        <span class="span-cost">14 800 руб.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="button-More-Cruises">
+            <button id="moreCruises">Больше круизов <i class="fas fa-caret-down"></i></button>
+        </div>
+        <div class="footer-menu">
+            <div class="footer-menu-about">
+                <a href="#">Вход для партнеров</a>
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="footer-cocial">
+                <a href="#">Будь на связи:</a>
+                <div class="footer-cocial-item">
+                    <div class="social1 vk"></div>
+                    <div class="social2 ok"></div>
+                    <div class="social3 yo"></div>
+                    <div class="social4 insta"></div>
+                </div>
+            </div>
+            <div class="footer-information">
+                <span class="footer-information-number">8 800 500-61-05 </span>
+                <p class="footer-information-support">Круглосуточная поддержка</p>
+                <p class="footer-information-copy">© 2016 OOO «Городские Круизы»</p>
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<script src="JS/popup.js"></script>
+<script src="JS/menu.js"></script>
+</body>
+</html>
